@@ -207,6 +207,32 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 </details>
 
 <details>
+ <summary><code>POST</code> <code><b>/kredi-yonetimi/{id}/degerlendir</b></code> <code>(Sistemde var olan kredi başvurusunun değerlendirilmesi istendiğinde bu endpoint kullanılacak)</code></summary>
+
+##### Parameters
+
+> | required | data type | description                      |
+> |----------|-----------|----------------------------------|
+> | required | int       | Kredi başvurusuna ait id bilgisi |
+
+
+##### Responses
+
+> | http code | content-type               | response                                 |
+> |-----------|----------------------------|------------------------------------------|
+> | `200`     | `text/plain;charset=UTF-8` | `Başvuru sonucu dönülecek`               |
+> | `401`     | `text/plain:charset=UTF-8` | `Unauthorized`                           |
+> | `422`     | `application/json`         | `{"code":"422","message":"Hata mesajı"}` |
+
+##### Example cURL
+
+> ```javascript
+>  curl -X POST -H "Content-Type: application/json" http://localhost:8090/kredi-yonetimi/1/degerlendir
+> ```
+
+</details>
+
+<details>
  <summary><code>GET</code> <code><b>/kredi-yonetimi/krediler</b></code> <code>(Sistemde var olan kredi başvuru bilgileri istediğinde bu endpoint kullanılacak)</code></summary>
 
 ##### Parameters
