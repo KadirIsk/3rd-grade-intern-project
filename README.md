@@ -218,11 +218,11 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 
 ##### Responses
 
-> | http code | content-type               | response                                 |
-> |-----------|----------------------------|------------------------------------------|
-> | `200`     | `text/plain;charset=UTF-8` | `Başvuru sonucu dönülecek`               |
-> | `401`     | `text/plain:charset=UTF-8` | `Unauthorized`                           |
-> | `422`     | `application/json`         | `{"code":"422","message":"Hata mesajı"}` |
+> | http code | content-type               | response                                            |
+> |-----------|----------------------------|-----------------------------------------------------|
+> | `200`     | `text/plain;charset=UTF-8` | `Başvuru DEGERLENDIRME_BEKLIYOR durumuna getirildi` |
+> | `401`     | `text/plain:charset=UTF-8` | `Unauthorized`                                      |
+> | `422`     | `application/json`         | `{"code":"422","message":"Hata mesajı"}`            |
 
 ##### Example cURL
 
