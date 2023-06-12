@@ -936,3 +936,19 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 </details>
 
 ----------------------------------------------------------------------------------------------------
+
+### Cron Job's
+Sistemde belirli aralıklarla yapılması gerken iş parçaçıklarını otomatik olarak gerçekleştiren thread yapıları tasarlanmalıdır. Spring Boot framework'ünde job'ların nasıl aktifleştirileceği ile ilgili [Spring Scheduled Tasks](https://www.baeldung.com/spring-scheduled-tasks) kaynağından yararlanılabilir.
+
+#### Değerleme Uygulaması
+Değerleme uygulaması kapsamında dört adet cron job implement edilecek.
+
+1. `Hayvansal Değer Oluştur`: Bu cron job **HayvanIrk** tablosunda olan ancak **HayvansalVarlikDeger** tablosunda olmayan hayvan ırk'ları için (her bir cinsiyet için 1 kayıt) **HayvansalVarlikDeger** tablosuna değer bilgisi 0 olan bir kayıt atacak. 0-12 saatleri arasında her 5 dakikada bir çalışacak şekilde ayarlanmalı.
+2. `Hayvansal Değer Güncelle`: Bu cron job **HayvansalVarlikDeger** tablosunda olan kayıtların değer alanına 0 ile 100000 arasında random bir değer atayacak. Her 5 dakikada bir çalışacak şekilde ayarlanmalı.
+3. `Gayrimenkul Değer Oluştur`: Bu cron job **GayrimenkulTip** enum listesinde olan ancak **GayrimenkulVarlikDeger** tablosunda olmayan gayrimenkul tipleri için **GayrimenkulVarlikDeger** tablosuna değer bilgisi 0 olan bir kayıt atacak. 0-12 saatleri arasında her 5 dakikada bir çalışacak şekilde ayarlanmalı.
+4. `Gayrimenkul Değer Güncelle`: Bu cron job **GayrimenkulVarlikDeger** tablosunda olan kayıtların değer alanına 0 ile 1000000 arasında random bir değer atayacak. Her 5 dakikada bir çalışacak şekilde ayarlanmalı.
+
+#### Ana Uygulama
+Ana uygulama kapsamında bir adet cron job implement edilecek.
+
+1. `Kredi Başvuru Değerlendir`: Bu cron job **KrediBasvuru** tablosunda `DEGERLENDIRME_BEKLIYOR` durumunda olan kayıtları değerlendirmeye tabi tutacak. Çiftçiye ait hayvansal varlıklarına ait gelir-gider değerlerini ve gayrimenkul varlıklarına ait değerleri hesaplayacak. Hayvansal ve gayrimenkul varlıklara ait değer hesaplaması thread'ler yardımıyla `asenkron` şekilde yapılacak. 0-12 saatleri arasında her 5 dakikada bir çalışacak şekilde ayarlanmalı.
