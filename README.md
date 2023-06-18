@@ -79,6 +79,10 @@ Proje kapsamında Ana ve Değerleme olmak üzere iki adet uygulama geliştirilec
 + [Cascade Types](https://www.baeldung.com/jpa-cascade-types)
 + [Spring Bean Scopes](https://www.baeldung.com/spring-bean-scopes)
 + [Spring Stereotype](https://howtodoinjava.com/spring-core/stereotype-annotations/)
++ [Spring Transactions](https://www.baeldung.com/transaction-configuration-with-jpa-and-spring)
++ [Spring Transaction Propagation & Isolation](https://www.baeldung.com/spring-transactional-propagation-isolation)
++ [Spring Transaction Management](https://docs.spring.io/spring-framework/reference/data-access/transaction.html)
++ [Lost Update Problem](https://www.javacodemonk.com/prevent-lost-updates-in-database-transaction-using-spring-hibernate-f16d36d5)
 + [Optimistic Locking in JPA](https://www.baeldung.com/jpa-optimistic-locking)
 + [Pesimistic Locking in JPA](https://www.baeldung.com/jpa-pessimistic-locking)
 
