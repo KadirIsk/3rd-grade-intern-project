@@ -19,6 +19,34 @@ Proje kapsamında Ana ve Değerleme olmak üzere iki adet uygulama geliştirilec
 ***
 
 # Ön Hazırlık
+### Çalışma öncesi faydalı olacak okumalar
++ [OOP Principles](https://khalilstemmler.com/articles/object-oriented/programming/4-principles/)
++ [SOLID Türkçe kaynak](http://aliozgur.net/2018/03/02/solid)
++ [SOLID İngilizce kaynak](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
++ [Design Patterns](https://refactoring.guru/design-patterns)
++ [Clean Code](https://betterprogramming.pub/12-conventions-for-writing-clean-code-e16c51e3939a)
++ [YAGNI](https://martinfowler.com/bliki/Yagni.html)
++ [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
++ [KISS](https://en.wikipedia.org/wiki/KISS_principle)
++ [Defensive Programming](https://en.wikipedia.org/wiki/Defensive_programming)
++ [Offensive Programming](https://en.wikipedia.org/wiki/Offensive_programming)
++ [Early Return](https://medium.com/swlh/return-early-pattern-3d18a41bba8)
++ [IoC & DI in Spring](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)
++ [Spring Bean](https://www.baeldung.com/spring-bean)
++ [Hibernate Caching](https://www.digitalocean.com/community/tutorials/hibernate-caching-first-level-cache)
++ [Entity Stage Transition in Hibernate](https://www.digitalocean.com/community/tutorials/hibernate-caching-first-level-cache)
++ [Cascade Types](https://www.baeldung.com/jpa-cascade-types)
++ [Spring Bean Scopes](https://www.baeldung.com/spring-bean-scopes)
++ [Spring Stereotype](https://howtodoinjava.com/spring-core/stereotype-annotations/)
++ [Spring Transactions](https://www.baeldung.com/transaction-configuration-with-jpa-and-spring)
++ [Spring Transaction Propagation & Isolation](https://www.baeldung.com/spring-transactional-propagation-isolation)
++ [Spring Transaction Management](https://docs.spring.io/spring-framework/reference/data-access/transaction.html)
++ [Lost Update Problem](https://www.javacodemonk.com/prevent-lost-updates-in-database-transaction-using-spring-hibernate-f16d36d5)
++ [Optimistic Locking in JPA](https://www.baeldung.com/jpa-optimistic-locking)
++ [Pesimistic Locking in JPA](https://www.baeldung.com/jpa-pessimistic-locking)
++ [Spring jpa flush](https://www.baeldung.com/spring-jpa-flush)
++ [Jpa join types](https://www.baeldung.com/jpa-join-types)
++ [N+1 problem](https://vladmihalcea.com/n-plus-1-query-problem/)
 ### Geliştirmeler esnasında kullanılacak ortamların kurulumu sağlanmalı
 + [Intellij IDEA Community Edition](https://www.jetbrains.com/idea/download)
 + [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -59,32 +87,6 @@ Proje kapsamında Ana ve Değerleme olmak üzere iki adet uygulama geliştirilec
   Kurulum yapıldıktan ve sorunsuz bağlantı sağlandıktan sonra **show databases;** komutu çalıştırılır ve Adminer'de olduğu gibi bir sonuç beklenir.
 
   ![alt text](./resources/images/db-navigator-command-execute.png "Db Navigator Plugin Execute Command")
-
-### Çalışma öncesi faydalı olacak okumalar
-+ [OOP Principles](https://khalilstemmler.com/articles/object-oriented/programming/4-principles/)
-+ [SOLID Türkçe kaynak](http://aliozgur.net/2018/03/02/solid)
-+ [SOLID İngilizce kaynak](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-+ [Design Patterns](https://refactoring.guru/design-patterns)
-+ [Clean Code](https://betterprogramming.pub/12-conventions-for-writing-clean-code-e16c51e3939a)
-+ [YAGNI](https://martinfowler.com/bliki/Yagni.html)
-+ [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
-+ [KISS](https://en.wikipedia.org/wiki/KISS_principle)
-+ [Defensive Programming](https://en.wikipedia.org/wiki/Defensive_programming)
-+ [Offensive Programming](https://en.wikipedia.org/wiki/Offensive_programming)
-+ [Early Return](https://medium.com/swlh/return-early-pattern-3d18a41bba8)
-+ [IoC & DI in Spring](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)
-+ [Spring Bean](https://www.baeldung.com/spring-bean)
-+ [Hibernate Caching](https://www.digitalocean.com/community/tutorials/hibernate-caching-first-level-cache)
-+ [Entity Stage Transition in Hibernate](https://www.digitalocean.com/community/tutorials/hibernate-caching-first-level-cache)
-+ [Cascade Types](https://www.baeldung.com/jpa-cascade-types)
-+ [Spring Bean Scopes](https://www.baeldung.com/spring-bean-scopes)
-+ [Spring Stereotype](https://howtodoinjava.com/spring-core/stereotype-annotations/)
-+ [Spring Transactions](https://www.baeldung.com/transaction-configuration-with-jpa-and-spring)
-+ [Spring Transaction Propagation & Isolation](https://www.baeldung.com/spring-transactional-propagation-isolation)
-+ [Spring Transaction Management](https://docs.spring.io/spring-framework/reference/data-access/transaction.html)
-+ [Lost Update Problem](https://www.javacodemonk.com/prevent-lost-updates-in-database-transaction-using-spring-hibernate-f16d36d5)
-+ [Optimistic Locking in JPA](https://www.baeldung.com/jpa-optimistic-locking)
-+ [Pesimistic Locking in JPA](https://www.baeldung.com/jpa-pessimistic-locking)
 
 # Sistem Tasarımı
 Basitlik açısından ana uygulama ve değerleme uygulaması aynı veri tabanını kullanabilir. İstendiği taktirde veritabanları ayrılabilir ancak bu durumda ana uygulamada oluşturulan tanımların değerleme uygulamasının kullanacağı veritabanına aktarımlası gerekecektir. Ayrı veritabanı kullanıldığı taktirde bu durum göz önünde bulundurulmalıdır.
