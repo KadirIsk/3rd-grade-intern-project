@@ -130,7 +130,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X POST -H "Content-Type: application/json" --data '{"ad": "Kadir", "soyad": "IŞIK", "cinsiyet": "ERKEK", "tckn":"32555486176", "dogumTarihi": "1992-01-01"}' http://localhost:8090/ciftci-yonetimi
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X POST -H "Content-Type: application/json" --data '{"ad": "Kadir", "soyad": "IŞIK", "cinsiyet": "ERKEK", "tckn":"32555486176", "dogumTarihi": "1992-01-01"}' http://localhost:8090/ciftci-yonetimi
 > ```
 
 </details>
@@ -154,7 +154,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/ciftci-yonetimi/ciftciler
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/ciftci-yonetimi/ciftciler
 > ```
 
 </details>
@@ -179,7 +179,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/ciftci-yonetimi/ciftciler/1
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/ciftci-yonetimi/ciftciler/1
 > ```
 
 </details>
@@ -207,7 +207,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X POST -H "Content-Type: application/json" --data '{"ciftciId": "1", "talepEdilenKrediMiktari": "1750000"}' http://localhost:8090/kredi-yonetimi
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X POST -H "Content-Type: application/json" --data '{"ciftciId": "1", "talepEdilenKrediMiktari": "1750000"}' http://localhost:8090/kredi-yonetimi
 > ```
 
 </details>
@@ -233,7 +233,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X POST -H "Content-Type: application/json" http://localhost:8090/kredi-yonetimi/1/degerlendir
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X POST -H "Content-Type: application/json" http://localhost:8090/kredi-yonetimi/1/degerlendir
 > ```
 
 </details>
@@ -257,7 +257,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/kredi-yonetimi/krediler
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/kredi-yonetimi/krediler
 > ```
 
 </details>
@@ -282,7 +282,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/kredi-yonetimi/krediler/1
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/kredi-yonetimi/krediler/1
 > ```
 
 </details>
@@ -307,7 +307,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/kredi-yonetimi/ciftciler/1
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/kredi-yonetimi/ciftciler/1
 > ```
 
 </details>
@@ -333,7 +333,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/kredi-yonetimi/ciftciler/1/KREDILESMIS
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/kredi-yonetimi/ciftciler/1/KREDILESMIS
 > ```
 
 </details>
@@ -361,7 +361,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X POST -H "Content-Type: application/json" --data '{"ad": "Merinos Koyun", "hayvanTuru": "KOYUN"}' http://localhost:8090/hayvan-irk-yonetimi
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X POST -H "Content-Type: application/json" --data '{"ad": "Merinos Koyun", "hayvanTuru": "KOYUN"}' http://localhost:8090/hayvan-irk-yonetimi
 > ```
 
 </details>
@@ -385,7 +385,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-irk-yonetimi/irklar
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-irk-yonetimi/irklar
 > ```
 
 </details>
@@ -410,7 +410,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-irk-yonetimi/irklar/1
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-irk-yonetimi/irklar/1
 > ```
 
 </details>
@@ -438,7 +438,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X POST -H "Content-Type: application/json" --data '{"ad": "Yem", "birim": "KILOGRAM", "birimFiyat": "250"}' http://localhost:8090/hayvansal-gelir-yonetimi
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X POST -H "Content-Type: application/json" --data '{"ad": "Yem", "birim": "KILOGRAM", "birimFiyat": "250"}' http://localhost:8090/hayvansal-gelir-yonetimi
 > ```
 
 </details>
@@ -462,7 +462,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvansal-gelir-yonetimi/gelirler
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvansal-gelir-yonetimi/gelirler
 > ```
 
 </details>
@@ -487,7 +487,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvansal-gelir-yonetimi/gelirler/1
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvansal-gelir-yonetimi/gelirler/1
 > ```
 
 </details>
@@ -515,7 +515,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X POST -H "Content-Type: application/json" --data '{"ad": "Yem", "birim": "KILOGRAM", "birimFiyat": "250"}' http://localhost:8090/hayvansal-gider-yonetimi
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X POST -H "Content-Type: application/json" --data '{"ad": "Yem", "birim": "KILOGRAM", "birimFiyat": "250"}' http://localhost:8090/hayvansal-gider-yonetimi
 > ```
 
 </details>
@@ -539,7 +539,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvansal-gider-yonetimi/giderler
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvansal-gider-yonetimi/giderler
 > ```
 
 </details>
@@ -564,7 +564,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvansal-gider-yonetimi/gider/1
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvansal-gider-yonetimi/gider/1
 > ```
 
 </details>
@@ -592,7 +592,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X POST -H "Content-Type: application/json" --data '{"hayvanIrkId": "1", "hayvansalGelirId": "1", "cinsiyet": "TUMU", "miktar": "200"}' http://localhost:8090/hayvan-gelir-iliskisi-yonetimi
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X POST -H "Content-Type: application/json" --data '{"hayvanIrkId": "1", "hayvansalGelirId": "1", "cinsiyet": "TUMU", "miktar": "200"}' http://localhost:8090/hayvan-gelir-iliskisi-yonetimi
 > ```
 
 </details>
@@ -617,7 +617,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-gelir-iliskisi-yonetimi/irklar/1/gelirler
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-gelir-iliskisi-yonetimi/irklar/1/gelirler
 > ```
 
 </details>
@@ -643,7 +643,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-gelir-iliskisi-yonetimi/irklar/1/DISI/gelirler
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-gelir-iliskisi-yonetimi/irklar/1/DISI/gelirler
 > ```
 
 </details>
@@ -671,7 +671,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X POST -H "Content-Type: application/json" --data '{"hayvanIrkId": "1", "hayvansalGelirId": "1", "cinsiyet": "TUMU", "miktar": "200"}' http://localhost:8090/hayvan-gider-iliskisi-yonetimi
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X POST -H "Content-Type: application/json" --data '{"hayvanIrkId": "1", "hayvansalGelirId": "1", "cinsiyet": "TUMU", "miktar": "200"}' http://localhost:8090/hayvan-gider-iliskisi-yonetimi
 > ```
 
 </details>
@@ -696,7 +696,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-gider-iliskisi-yonetimi/irklar/1/giderler
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-gider-iliskisi-yonetimi/irklar/1/giderler
 > ```
 
 </details>
@@ -722,7 +722,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-gider-iliskisi-yonetimi/irklar/1/ERKEK/giderler
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-gider-iliskisi-yonetimi/irklar/1/ERKEK/giderler
 > ```
 
 </details>
@@ -750,7 +750,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X POST -H "Content-Type: application/json" --data '{"ciftciVarlikId": "1", "hayvanIrkId": "1", "cinsiyet": "DISI", "hayvanAdeti": "50"}' http://localhost:8090/hayvansal-varlik-yonetimi
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X POST -H "Content-Type: application/json" --data '{"ciftciVarlikId": "1", "hayvanIrkId": "1", "cinsiyet": "DISI", "hayvanAdeti": "50"}' http://localhost:8090/hayvansal-varlik-yonetimi
 > ```
 
 </details>
@@ -775,7 +775,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-varlik-yonetimi/ciftciler/1/varliklar
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-varlik-yonetimi/ciftciler/1/varliklar
 > ```
 
 </details>
@@ -801,7 +801,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-varlik-yonetimi/ciftciler/1/varliklar/1
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-varlik-yonetimi/ciftciler/1/varliklar/1
 > ```
 
 </details>
@@ -829,7 +829,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X POST -H "Content-Type: application/json" --data '{"ciftciVarlikId": "1", "ada": "1000", "parsel": "1000", "yuzOlcumu": "1923", "gayrimenkulTipi": "TARLA"}' http://localhost:8090/gayrimenkul-varlik-yonetimi
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X POST -H "Content-Type: application/json" --data '{"ciftciVarlikId": "1", "ada": "1000", "parsel": "1000", "yuzOlcumu": "1923", "gayrimenkulTipi": "TARLA"}' http://localhost:8090/gayrimenkul-varlik-yonetimi
 > ```
 
 </details>
@@ -854,7 +854,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/gayrimenkul-varlik-yonetimi/ciftciler/1/varliklar
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/gayrimenkul-varlik-yonetimi/ciftciler/1/varliklar
 > ```
 
 </details>
@@ -880,7 +880,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/gayrimenkul-varlik-yonetimi/ciftciler/1/varliklar/MESKUN
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/gayrimenkul-varlik-yonetimi/ciftciler/1/varliklar/MESKUN
 > ```
 
 </details>
@@ -912,7 +912,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvansal-varlik-deger-yonetimi/1/DISI
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvansal-varlik-deger-yonetimi/1/DISI
 > ```
 
 </details>
@@ -936,7 +936,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
->  curl -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/gayrimenkul-varlik-deger-yonetimi/MESKUN
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/gayrimenkul-varlik-deger-yonetimi/MESKUN
 > ```
 
 </details>
