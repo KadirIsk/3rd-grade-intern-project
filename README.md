@@ -47,6 +47,7 @@ Proje kapsamında Ana ve Değerleme olmak üzere iki adet uygulama geliştirilec
 + [Spring jpa flush](https://www.baeldung.com/spring-jpa-flush)
 + [Jpa join types](https://www.baeldung.com/jpa-join-types)
 + [N+1 problem](https://vladmihalcea.com/n-plus-1-query-problem/)
+
 ### Geliştirmeler esnasında kullanılacak ortamların kurulumu sağlanmalı
 + [Intellij IDEA Community Edition](https://www.jetbrains.com/idea/download)
 + [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -101,6 +102,28 @@ Gerçeklenecek olan sistem için sınıflara ait class diagram aşağıdaki gibi
 ![alt text](./resources/images/degerleme-app-class-diagram.png "Degerleme Uygulamasi Class Diagram")
 
 Projede entity'ler arası kurulucak ilişkiler için [Entity relationships](https://www.baeldung.com/spring-data-rest-relationships) yazısından faydalanılabilir. Projeye Many-to-One ilişkisine örnek teşkil edecek Commit-PullRequest entity'leri eklenmiştir: [Commit](./src/main/java/com/cks/example/entity/Commit.java), [PullRequest](./src/main/java/com/cks/example/entity/PullRequest.java).
+
+### Version Control (Git)
+Projede versiyon kontrol sistemi olarak Git kullanılacak. Tüm Git komutları command prompt (Git Bash) üzerinden çalıştırılacaktır (conflict çözümleri ide üzerinden yapılabilir). Yararlı olabilecek Git comutları:
+* init
+* add
+* rm
+* commit
+* checkout
+* branch
+* status
+* pull
+* push
+* fetch
+* log
+* cherry-pick
+* stash
+* reflog
+* reset
+* tag
+* merge
+* rebase
+
 
 ### İmplement edilmesi gereken endpoint'ler
 Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header için `6RcVRuwxUr07F54B7a9IPomjh` değeri setlenmiş olmalı. Bu header bilgisi olmayan ya da faklı bir değere sahip olan request'ler için `401 Unauthorized` yanıtı dönülecektir.
