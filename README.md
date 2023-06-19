@@ -47,6 +47,7 @@ Proje kapsamında Ana ve Değerleme olmak üzere iki adet uygulama geliştirilec
 + [Spring jpa flush](https://www.baeldung.com/spring-jpa-flush)
 + [Jpa join types](https://www.baeldung.com/jpa-join-types)
 + [N+1 problem](https://vladmihalcea.com/n-plus-1-query-problem/)
++ [Spring Security](https://www.marcobehler.com/guides/spring-security)
 
 ### Geliştirmeler esnasında kullanılacak ortamların kurulumu sağlanmalı
 + [Intellij IDEA Community Edition](https://www.jetbrains.com/idea/download)
@@ -126,7 +127,7 @@ Projede versiyon kontrol sistemi olarak Git kullanılacak. Tüm Git komutları c
 
 
 ### İmplement edilmesi gereken endpoint'ler
-Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header için `6RcVRuwxUr07F54B7a9IPomjh` değeri setlenmiş olmalı. Bu header bilgisi olmayan ya da faklı bir değere sahip olan request'ler için `401 Unauthorized` yanıtı dönülecektir.
+Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header için `6RcVRuwxUr07F54B7a9IPomjh` değeri setlenmiş olmalı. Bu header bilgisi olmayan ya da faklı bir değere sahip olan request'ler için `401 Unauthorized` yanıtı dönülecektir. Uygulamaya gelen request'leri filtrelemek için [OncePerRequestFilter](https://www.baeldung.com/spring-onceperrequestfilter) yazısından faydalanılabilir.
 
 #### Ana Uygulama
 
