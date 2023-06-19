@@ -105,7 +105,7 @@ Gerçeklenecek olan sistem için sınıflara ait class diagram aşağıdaki gibi
 Projede entity'ler arası kurulucak ilişkiler için [Entity relationships](https://www.baeldung.com/spring-data-rest-relationships) yazısından faydalanılabilir. Projeye Many-to-One ilişkisine örnek teşkil edecek Commit-PullRequest entity'leri eklenmiştir: [Commit](./src/main/java/com/cks/example/entity/Commit.java), [PullRequest](./src/main/java/com/cks/example/entity/PullRequest.java).
 
 ### Version Control (Git)
-Projede versiyon kontrol sistemi olarak Git kullanılacak. Tüm Git komutları command prompt (Git Bash) üzerinden çalıştırılacaktır (conflict çözümleri ide üzerinden yapılabilir). Yararlı olabilecek Git comutları:
+Projede versiyon kontrol sistemi olarak Git kullanılacak. Tüm Git komutları `command prompt` (Git Bash) üzerinden çalıştırılacaktır (conflict çözümleri ide üzerinden yapılabilir). Geliştirme süresince her hafta için yeni bir branch oluşturulacak ve geliştirmeler o branch üstünde yapılacak. O hafta bitiminde yapılmış olan değişikler için `master` branch'ine pr (pull request) açılacak. Yararlı olabilecek Git comutları:
 * init
 * add
 * rm
