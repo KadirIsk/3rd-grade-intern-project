@@ -125,6 +125,9 @@ Gerçeklenecek olan sistem için sınıflara ait class diagram aşağıdaki gibi
 
 Projede entity'ler arası kurulucak ilişkiler için [Entity relationships](https://www.baeldung.com/spring-data-rest-relationships) yazısından faydalanılabilir. Projeye Many-to-One ilişkisine örnek teşkil edecek Commit-PullRequest entity'leri eklenmiştir: [Commit](./src/main/java/com/cks/example/entity/Commit.java), [PullRequest](./src/main/java/com/cks/example/entity/PullRequest.java).
 
+Kurgulanmak istenen sistemin daha anlaşılır olması için aşağıdaki örnek veriler incelenebilir.
+
+![alt text](./resources/images/sistem-snapshot.png "Ornek Sistem")
 
 ### İmplement edilmesi gereken endpoint'ler
 Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header için `6RcVRuwxUr07F54B7a9IPomjh` değeri setlenmiş olmalı. Bu header bilgisi olmayan ya da faklı bir değere sahip olan request'ler için `401 Unauthorized` yanıtı dönülecektir. Uygulamaya gelen request'leri filtrelemek için [OncePerRequestFilter](https://www.baeldung.com/spring-onceperrequestfilter) yazısından faydalanılabilir.
@@ -982,3 +985,4 @@ Değerleme uygulaması kapsamında dört adet cron job implement edilecek.
 Ana uygulama kapsamında bir adet cron job implement edilecek.
 
 1. `Kredi Başvuru Değerlendir`: Bu cron job **KrediBasvuru** tablosunda `DEGERLENDIRME_BEKLIYOR` durumunda olan kayıtları değerlendirmeye tabi tutacak. Çiftçiye ait hayvansal varlıklarına ait gelir-gider değerlerini ve gayrimenkul varlıklarına ait değerleri hesaplayacak. Hayvansal ve gayrimenkul varlıklara ait değer hesaplaması thread'ler yardımıyla `asenkron` şekilde yapılacak. 0-12 saatleri arasında her 5 dakikada bir çalışacak şekilde ayarlanmalı.
+
