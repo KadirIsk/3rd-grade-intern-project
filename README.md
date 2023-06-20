@@ -90,21 +90,7 @@ Proje kapsamında Ana ve Değerleme olmak üzere iki adet uygulama geliştirilec
 
   ![alt text](./resources/images/db-navigator-command-execute.png "Db Navigator Plugin Execute Command")
 
-# Sistem Tasarımı
-Basitlik açısından ana uygulama ve değerleme uygulaması aynı veri tabanını kullanabilir. İstendiği taktirde veritabanları ayrılabilir ancak bu durumda ana uygulamada oluşturulan tanımların değerleme uygulamasının kullanacağı veritabanına aktarımlası gerekecektir. Ayrı veritabanı kullanıldığı taktirde bu durum göz önünde bulundurulmalıdır.
-
-### Class Diagram
-Gerçeklenecek olan sistem için sınıflara ait class diagram aşağıdaki gibi olmalıdır. Belli bir mantık çerçevesinde class'lar arası ilişkiler değiştirilebilir. Eksik olduğu düşünülen class, enumaration tanımları eklenebilir. Bu konuda olabildiğince serbest şekilde değişiklik kararı alınabilir.
-
-#### Ana Uygulama
-![alt text](./resources/images/ana-uygulama-class-diagram.png "Ana Uygulama Class Diagram")
-
-#### Degerleme Uygulamasi
-![alt text](./resources/images/degerleme-app-class-diagram.png "Degerleme Uygulamasi Class Diagram")
-
-Projede entity'ler arası kurulucak ilişkiler için [Entity relationships](https://www.baeldung.com/spring-data-rest-relationships) yazısından faydalanılabilir. Projeye Many-to-One ilişkisine örnek teşkil edecek Commit-PullRequest entity'leri eklenmiştir: [Commit](./src/main/java/com/cks/example/entity/Commit.java), [PullRequest](./src/main/java/com/cks/example/entity/PullRequest.java).
-
-### Version Control (Git)
+# Version Control (Git)
 Projede versiyon kontrol sistemi olarak Git kullanılacak. Tüm Git komutları `command prompt` (Git Bash) üzerinden çalıştırılacaktır (conflict çözümleri ide üzerinden yapılabilir). Geliştirme süresince her hafta için yeni bir branch oluşturulacak ve geliştirmeler o branch üstünde yapılacak. O hafta bitiminde yapılmış olan değişikler için `master` branch'ine pr (pull request) açılacak. Yararlı olabilecek Git comutları:
 * init
 * add
@@ -124,6 +110,20 @@ Projede versiyon kontrol sistemi olarak Git kullanılacak. Tüm Git komutları `
 * tag
 * merge
 * rebase
+
+# Sistem Tasarımı
+Basitlik açısından ana uygulama ve değerleme uygulaması aynı veri tabanını kullanabilir. İstendiği taktirde veritabanları ayrılabilir ancak bu durumda ana uygulamada oluşturulan tanımların değerleme uygulamasının kullanacağı veritabanına aktarımlası gerekecektir. Ayrı veritabanı kullanıldığı taktirde bu durum göz önünde bulundurulmalıdır.
+
+### Class Diagram
+Gerçeklenecek olan sistem için sınıflara ait class diagram aşağıdaki gibi olmalıdır. Belli bir mantık çerçevesinde class'lar arası ilişkiler değiştirilebilir. Eksik olduğu düşünülen class, enumaration tanımları eklenebilir. Bu konuda olabildiğince serbest şekilde değişiklik kararı alınabilir.
+
+#### Ana Uygulama
+![alt text](./resources/images/ana-uygulama-class-diagram.png "Ana Uygulama Class Diagram")
+
+#### Degerleme Uygulamasi
+![alt text](./resources/images/degerleme-app-class-diagram.png "Degerleme Uygulamasi Class Diagram")
+
+Projede entity'ler arası kurulucak ilişkiler için [Entity relationships](https://www.baeldung.com/spring-data-rest-relationships) yazısından faydalanılabilir. Projeye Many-to-One ilişkisine örnek teşkil edecek Commit-PullRequest entity'leri eklenmiştir: [Commit](./src/main/java/com/cks/example/entity/Commit.java), [PullRequest](./src/main/java/com/cks/example/entity/PullRequest.java).
 
 
 ### İmplement edilmesi gereken endpoint'ler
