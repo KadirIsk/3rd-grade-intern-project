@@ -985,4 +985,4 @@ Değerleme uygulaması kapsamında dört adet cron job implement edilecek.
 Ana uygulama kapsamında bir adet cron job implement edilecek.
 
 1. `Kredi Başvuru Değerlendir`: Bu cron job **KrediBasvuru** tablosunda `DEGERLENDIRME_BEKLIYOR` durumunda olan kayıtları değerlendirmeye tabi tutacak. Çiftçiye ait hayvansal varlıklarına ait gelir-gider değerlerini ve gayrimenkul varlıklarına ait değerleri hesaplayacak. Hayvansal ve gayrimenkul varlıklara ait değer hesaplaması thread'ler yardımıyla `asenkron` şekilde yapılacak. 0-12 saatleri arasında her 5 dakikada bir çalışacak şekilde ayarlanmalı.
-
+   ![alt text](./resources/images/kredi-degerlendirme-job.png "Kredi Degerlendirme Job Calisma Mantigi")
