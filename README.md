@@ -971,7 +971,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ----------------------------------------------------------------------------------------------------
 
 ### Cron Job's
-Sistemde belirli aralıklarla yapılması gerken iş parçaçıklarını otomatik olarak gerçekleştiren thread yapıları tasarlanmalıdır. Spring Boot framework'ünde job'ların nasıl aktifleştirileceği ile ilgili [Spring Scheduled Tasks](https://www.baeldung.com/spring-scheduled-tasks) kaynağından yararlanılabilir.
+Sistemde belirli aralıklarla yapılması gerken iş parçaçıklarını otomatik olarak gerçekleştiren thread yapıları tasarlanmalıdır. Spring Boot framework'ünde job'ların nasıl aktifleştirileceği ile ilgili [Spring Scheduled Tasks](https://www.baeldung.com/spring-scheduled-tasks) kaynağından yararlanılabilir. Örnek olması açısından projeye eklenen [JobConfig](./src/main/java/com/cks/example/config/JobConfig.java) ve [AsyncServiceJob](./src/main/java/com/cks/example/job/AsyncServiceJob.java) dosyaları incelenebilir.  
 
 #### Değerleme Uygulaması
 Değerleme uygulaması kapsamında dört adet cron job implement edilecek.
@@ -984,5 +984,5 @@ Değerleme uygulaması kapsamında dört adet cron job implement edilecek.
 #### Ana Uygulama
 Ana uygulama kapsamında bir adet cron job implement edilecek.
 
-1. `Kredi Başvuru Değerlendir`: Bu cron job **KrediBasvuru** tablosunda `DEGERLENDIRME_BEKLIYOR` durumunda olan kayıtları değerlendirmeye tabi tutacak. Çiftçiye ait hayvansal varlıklarına ait gelir-gider değerlerini ve gayrimenkul varlıklarına ait değerleri hesaplayacak. Hayvansal ve gayrimenkul varlıklara ait değer hesaplaması thread'ler yardımıyla `asenkron` şekilde yapılacak. 0-12 saatleri arasında her 5 dakikada bir çalışacak şekilde ayarlanmalı.
+1. `Kredi Başvuru Değerlendir`: Bu cron job **KrediBasvuru** tablosunda `DEGERLENDIRME_BEKLIYOR` durumunda olan kayıtları değerlendirmeye tabi tutacak. Çiftçiye ait hayvansal varlıklarına ait gelir-gider değerlerini ve gayrimenkul varlıklarına ait değerleri hesaplayacak. Hayvansal ve gayrimenkul varlıklara ait değer hesaplaması thread'ler yardımıyla `asenkron` şekilde yapılacak. Örnek olması açısından projeye eklenen [TaskExecutorConfig](./src/main/java/com/cks/example/config/TaskExecutorConfig.java), [AsyncService](./src/main/java/com/cks/example/service/AsyncService.java), [AsyncServiceFacade](./src/main/java/com/cks/example/service/AsyncServiceFacade.java) dosyaları incelenebilir. 0-12 saatleri arasında her 5 dakikada bir çalışacak şekilde ayarlanmalı.
    ![alt text](./resources/images/kredi-degerlendirme-job.png "Kredi Degerlendirme Job Calisma Mantigi")
