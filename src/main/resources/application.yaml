@@ -13,8 +13,12 @@ spring:
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
-custom.task-executor:
-  core-size: 6
-  max-size: 10
-  queue-capacity: 10
-  thread-prefix: custom-executor
+custom:
+  service:
+    url: http://localhost:8090
+    memorySizeMB: 2
+  task-executor:
+    core-size: 6
+    max-size: 10
+    queue-capacity: 10
+    thread-prefix: custom-executor
