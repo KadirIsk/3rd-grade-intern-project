@@ -163,6 +163,32 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 </details>
 
 <details>
+ <summary><code>POST</code> <code><b>/ciftci-yonetimi/yukle</b></code> <code>(Sisteme toplu olarak çiftçi eklenmek istediğinde bu endpoint kullanılacak)</code></summary>
+
+##### Parameters
+
+> | required | data type     | description                                                          |
+> |----------|---------------|----------------------------------------------------------------------|
+> | required | object (file) | Çiftçi nesnesi için zorunlu tüm alanları içeren csv formatında dosya |
+
+
+##### Responses
+
+> | http code | content-type               | response                                 |
+> |-----------|----------------------------|------------------------------------------|
+> | `201`     | `text/plain;charset=UTF-8` | `Başarılı bir şekilde oluşturuldu`       |
+> | `401`     | `text/plain:charset=UTF-8` | `Unauthorized`                           |
+> | `422`     | `application/json`         | `{"code":"422","message":"Hata mesajı"}` |
+
+##### Example cURL
+
+> ```javascript
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -H "Content-Type:multipart/form-data" -X POST -F "file=@/home/user/Desktop/game.csv" http://localhost:8090/ciftci-yonetimi/yukle
+> ```
+
+</details>
+
+<details>
  <summary><code>GET</code> <code><b>/ciftci-yonetimi/ciftciler</b></code> <code>(Sistemde var olan çiftçi bilgileri istediğinde bu endpoint kullanılacak)</code></summary>
 
 ##### Parameters
@@ -970,6 +996,8 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 
 ----------------------------------------------------------------------------------------------------
 
+[Csv Generator](https://extendsclass.com/csv-generator.html) yardımıyla 200 adet çiftçi kaydı oluşturulmalı. Oluşturulan bu çiftçi kayıtları `/ciftci-yonetimi/yukle` rest endpoint'i yardımıyla toplu olarak yüklenmeli. Örnek olması açısından projeye eklenen [GameCsvBean](./src/main/java/com/cks/example/dto/GameCsvBean.java), [FileUploadController](./src/main/java/com/cks/example/controller/FileUploadController.java), [game.csv](./resources/csv/game.csv) dosyaları incelenebilir.
+
 ### Cron Job's
 Sistemde belirli aralıklarla yapılması gerken iş parçaçıklarını otomatik olarak gerçekleştiren thread yapıları tasarlanmalıdır. Spring Boot framework'ünde job'ların nasıl aktifleştirileceği ile ilgili [Spring Scheduled Tasks](https://www.baeldung.com/spring-scheduled-tasks) kaynağından yararlanılabilir. Örnek olması açısından projeye eklenen [JobConfig](./src/main/java/com/cks/example/config/JobConfig.java) ve [AsyncServiceJob](./src/main/java/com/cks/example/job/AsyncServiceJob.java) dosyaları incelenebilir.  
 
@@ -985,4 +1013,5 @@ Değerleme uygulaması kapsamında dört adet cron job implement edilecek.
 Ana uygulama kapsamında bir adet cron job implement edilecek.
 
 1. `Kredi Başvuru Değerlendir`: Bu cron job **KrediBasvuru** tablosunda `DEGERLENDIRME_BEKLIYOR` durumunda olan kayıtları değerlendirmeye tabi tutacak. Çiftçiye ait hayvansal varlıklarına ait gelir-gider değerlerini ve gayrimenkul varlıklarına ait değerleri hesaplayacak. Hayvansal ve gayrimenkul varlıklara ait değer hesaplaması thread'ler yardımıyla `asenkron` şekilde yapılacak. Örnek olması açısından projeye eklenen [TaskExecutorConfig](./src/main/java/com/cks/example/config/TaskExecutorConfig.java), [AsyncService](./src/main/java/com/cks/example/service/AsyncService.java), [AsyncServiceFacade](./src/main/java/com/cks/example/service/AsyncServiceFacade.java) dosyaları incelenebilir. 0-12 saatleri arasında her 5 dakikada bir çalışacak şekilde ayarlanmalı.
-   ![alt text](./resources/images/kredi-degerlendirme-job.png "Kredi Degerlendirme Job Calisma Mantigi")
+
+    ![alt text](./resources/images/kredi-degerlendirme-job.png "Kredi Degerlendirme Job Calisma Mantigi")
