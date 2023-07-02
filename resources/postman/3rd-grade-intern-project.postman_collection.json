@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "ca3032cc-1012-4a2e-83a3-270cbd8a5113",
+		"name": "3rd-grade-intern-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload-game-csv",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-secure-key",
+						"value": "6RcVRuwxUr07F54B7a9IPomjh",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "gameCsvFile",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/home/legoshi/Desktop/game.csv"
+						},
+						{
+							"key": "abc",
+							"value": "1234",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{mainApiUrl}}/csv-file-upload/game",
+					"host": [
+						"{{mainApiUrl}}"
+					],
+					"path": [
+						"csv-file-upload",
+						"game"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
