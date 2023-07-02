@@ -20,7 +20,7 @@ public class PingJob {
 
         String resp = customWebClient
                 .get()
-                .uri(uriBuilder -> uriBuilder.pathSegment("ping").build())
+                .uri(uriBuilder -> uriBuilder.pathSegment("health-check","ping").build())
                 .retrieve()
                 .onStatus(HttpStatusCode::isError, response -> Mono.error(new RuntimeException("Ping servisi cagirimi hatali!")))
                 .bodyToMono(String.class)

@@ -19,13 +19,13 @@ import java.util.List;
 @RequestMapping("csv-file-upload")
 public class FileUploadController {
 
-    @GetMapping("/ping")
+    @GetMapping("ping")
     public ResponseEntity<String> pong() {
         return new ResponseEntity<>("pong", HttpStatus.OK);
     }
 
     @SneakyThrows
-    @PostMapping(value = "/game", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "game", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<CsvBean>> handleFileUpload(@RequestParam(name = "gameCsvFile") MultipartFile gameCsvFile) {
         List<CsvBean> gameList;
 
