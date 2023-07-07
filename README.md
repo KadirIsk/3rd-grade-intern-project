@@ -46,6 +46,7 @@ Proje kapsamında Ana ve Değerleme olmak üzere iki adet uygulama geliştirilec
 + [Pesimistic Locking in JPA](https://www.baeldung.com/jpa-pessimistic-locking)
 + [Spring jpa flush](https://www.baeldung.com/spring-jpa-flush)
 + [Jpa join types](https://www.baeldung.com/jpa-join-types)
++ [Spring Boog OSIV](https://www.baeldung.com/spring-open-session-in-view)
 + [N+1 problem](https://vladmihalcea.com/n-plus-1-query-problem/)
 + [Spring Security](https://www.marcobehler.com/guides/spring-security)
 
