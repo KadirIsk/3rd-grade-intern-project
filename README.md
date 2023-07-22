@@ -130,6 +130,25 @@ Kurgulanmak istenen sistemin daha anlaşılır olması için aşağıdaki örnek
 
 ![alt text](./resources/images/sistem-snapshot.png "Ornek Sistem")
 
+HayvanIrk tablosu için örnek veri oluşturmada zorluk yaşanırsa aşağıdaki veriler kullanılabilir.
+
+| Hayvan Irk         | Hayvan Türü |
+|--------------------|-------------|
+| Zavot              | Sığır       |
+| Yerli Güney Sarısı | Sığır       |
+| Yerli Kara         | Sığır       |
+| Boz Irk            | Sığır       |
+| Hasmer M           | Koyun       |
+| Malya M            | Koyun       |
+| Dorset Down        | Koyun       |
+| Dorper             | Koyun       |
+| Turcana            | Koyun       |
+| Akkeçi             | Keçi        |
+| Honamli Keçisi M   | Keçi        |
+| Ankara (Tiftik) M  | Keçi        |
+| Damascus M         | Keçi        |
+| İtalyan Mandası    | Manda       |
+
 ### İmplement edilmesi gereken endpoint'ler
 Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header için `6RcVRuwxUr07F54B7a9IPomjh` değeri setlenmiş olmalı. Bu header bilgisi olmayan ya da faklı bir değere sahip olan request'ler için `401 Unauthorized` yanıtı dönülecektir. Uygulamaya gelen request'leri filtrelemek için [OncePerRequestFilter](https://www.baeldung.com/spring-onceperrequestfilter) yazısından faydalanılabilir. Servis çağırımlarının nasıl yapılacağına dair örnek olması açısından projeye eklenen [WebClientConfig](./src/main/java/com/cks/example/config/WebClientConfig.java), [PingJob](./src/main/java/com/cks/example/job/PingJob.java), [PingController](./src/main/java/com/cks/example/controller/PingController.java) dosyaları incelenebilir.
 
