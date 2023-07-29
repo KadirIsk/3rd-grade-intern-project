@@ -854,14 +854,14 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 </details>
 
 <details>
- <summary><code>GET</code> <code><b>/hayvan-varlik-yonetimi/ciftciler/{id}/varliklar/{hayvanIrkId}</b></code> <code>(Spesifik id'li çiftçi için ilgili hayvan ırkına ait varlık bilgileri istendiğinde bu endpoint kullanılacak)</code></summary>
+ <summary><code>GET</code> <code><b>/hayvan-varlik-yonetimi/ciftci-varlik/{id}/varliklar/{hayvanIrkId}</b></code> <code>(Spesifik id'li çiftçi varlık için ilgili hayvan ırkına ait varlık bilgileri istendiğinde bu endpoint kullanılacak)</code></summary>
 
 ##### Parameters
 
-> | required | data type | description                  |
-> |----------|-----------|------------------------------|
-> | required | int       | Çiftçiye ait id bilgisi      |
-> | required | int       | Hayvan ırkına ait id bilgisi |
+> | required | data type | description                   |
+> |----------|-----------|-------------------------------|
+> | required | int       | Çiftçi varlığa ait id bilgisi |
+> | required | int       | Hayvan ırkına ait id bilgisi  |
 
 ##### Responses
 
@@ -874,7 +874,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
-> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-varlik-yonetimi/ciftciler/1/varliklar/1
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/hayvan-varlik-yonetimi/ciftci-varlik/1/varliklar/1
 > ```
 
 </details>
@@ -933,14 +933,14 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 </details>
 
 <details>
- <summary><code>GET</code> <code><b>/gayrimenkul-varlik-yonetimi/ciftciler/{id}/varliklar/{gayrimenkulTip}</b></code> <code>(Spesifik id'li çiftçi için ilgili gayrimenkul tipine ait varlık bilgileri istendiğinde bu endpoint kullanılacak)</code></summary>
+ <summary><code>GET</code> <code><b>/gayrimenkul-varlik-yonetimi/ciftci-varlik/{id}/varliklar/{gayrimenkulTip}</b></code> <code>(Spesifik id'li çiftçi varlık için ilgili gayrimenkul tipine ait varlık bilgileri istendiğinde bu endpoint kullanılacak)</code></summary>
 
 ##### Parameters
 
-> | required | data type | description              |
-> |----------|-----------|--------------------------|
-> | required | int       | Çiftçiye ait id bilgisi  |
-> | required | String    | Gayrimenkul tipi bilgisi |
+> | required | data type | description                   |
+> |----------|-----------|-------------------------------|
+> | required | int       | Çiftçi varlığa ait id bilgisi |
+> | required | String    | Gayrimenkul tipi bilgisi      |
 
 ##### Responses
 
@@ -953,7 +953,7 @@ Tüm endpointler için gelen request'lerde `x-secure-key` header'ı ve bu header
 ##### Example cURL
 
 > ```javascript
-> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/gayrimenkul-varlik-yonetimi/ciftciler/1/varliklar/MESKUN
+> curl -H "x-secure-key:6RcVRuwxUr07F54B7a9IPomjh" -X GET -H "Content-Type: text/plain;charset=UTF-8" http://localhost:8090/gayrimenkul-varlik-yonetimi/ciftci-varlik/1/varliklar/MESKUN
 > ```
 
 </details>
