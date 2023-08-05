@@ -34,7 +34,7 @@ Proje kapsamında Ana ve Değerleme olmak üzere iki adet uygulama geliştirilec
 + [IoC & DI in Spring](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)
 + [Spring Bean](https://www.baeldung.com/spring-bean)
 + [Hibernate Caching](https://www.digitalocean.com/community/tutorials/hibernate-caching-first-level-cache)
-+ [Entity Stage Transition in Hibernate](https://www.digitalocean.com/community/tutorials/hibernate-caching-first-level-cache)
++ [Entity States in Hibernate](https://howtodoinjava.com/hibernate/hibernate-entity-persistence-lifecycle-states/)
 + [Cascade Types](https://www.baeldung.com/jpa-cascade-types)
 + [Spring Bean Scopes](https://www.baeldung.com/spring-bean-scopes)
 + [Spring Stereotype](https://howtodoinjava.com/spring-core/stereotype-annotations/)
